@@ -1,5 +1,12 @@
+import PageContainer from "../../components/PageContainer";
+import NavBar from "../../components/NavBar";
+import NameTitle from "../../components/NameTitle";
+
 export default function Home() {
   return (
-    <h1>Home</h1>
+    <PageContainer>
+      <NavBar />
+      <NameTitle />
+    </PageContainer>
   );
 }
