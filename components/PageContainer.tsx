@@ -1,7 +1,8 @@
 interface PageContainerProps {
     children: React.ReactNode
+    height: string
 }
 
-export default function PageContainer({ children }: PageContainerProps) {
-    return <div className="w-screen h-auto flex flex-col p-12">{children}</div>;
+export default function PageContainer({ children, height }: PageContainerProps) {
+    return <div style={{ height: height }} className="w-screen relative flex flex-col p-12">{children}</div>;
 }
