@@ -5,7 +5,7 @@ import WorkExperience from "./WorkExperience";
 
 export default function AboutPage() {
   return (
-    <PageContainer>
+    <PageContainer gap="gap-28" paddingTop="pt-20">
       <About />
       <WorkExperience />
       <OutsideOfWork />

@@ -1,14 +1,15 @@
 import PageContainer from "../../components/PageContainer";
-import NavBar from "../../components/homepage/NavBar";
-import NameTitle from "../../components/homepage/NameTitle";
-import IntroAndSocials from "../../components/homepage/IntroAndSocials";
+import NavBar from "../../components/home/NavBar";
+import NameTitle from "../../components/home/NameTitle";
+import IntroAndSocials from "../../components/home/IntroAndSocials";
 import AboutPage from "../../components/about/AboutPage";
+import ProjectPage from "../../components/projects/ProjectPage";
 
 export default function Home() {
   return (
     <>
       {/* Home Page */}
-      <PageContainer height="100vh">
+      <PageContainer height="h-screen">
         <NavBar />
         <NameTitle />
 
@@ -27,7 +28,11 @@ export default function Home() {
         <IntroAndSocials />
       </PageContainer>
       
+      {/* About Section */}
       <AboutPage />
+
+      {/* Projects Section */}
+      <ProjectPage />
     </>
   );
 }

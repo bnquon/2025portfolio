@@ -28,5 +28,31 @@ export const DATA = {
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
       imageUrl: "https://images.unsplash.com/photo-1743921341544-e228f84a117c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
+  ],
+  projects : [
+    {
+      projectNumber: "(01)",
+      techStack: "Lorem, Lorem, Lorem, Lorem, Lorem, Lorem, Lorem",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
+      imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      projectNumber: "(02)",
+      techStack: "Lorem, Lorem, Lorem, Lorem, Lorem, Lorem, Lorem",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
+      imageUrl: "https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      projectNumber: "(03)",
+      techStack: "Lorem, Lorem, Lorem, Lorem, Lorem, Lorem, Lorem",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
+      imageUrl: "https://images.unsplash.com/photo-1675058860723-a10e0a6c4286?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      projectNumber: "(04)",
+      techStack: "Lorem, Lorem, Lorem, Lorem, Lorem, Lorem, Lorem",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
+      imageUrl: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
   ]
 }
