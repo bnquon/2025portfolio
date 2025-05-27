@@ -54,5 +54,20 @@ export const DATA = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam sed justo vehicula euismod. Nam ultricies purus et orci accumsan lobortis.",
       imageUrl: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
-  ]
+  ],
+  contact: [{
+    questionNumber: "(01)",
+    question: "What is your name?",
+    placeholder: "John Doe",
+  },
+  {
+    questionNumber: "(02)",
+    question: "What is your email address?",
+    placeholder: "johndoe@example.com",
+  },
+  {
+    questionNumber: "(03)",
+    question: "What is your message?",
+    placeholder: "Hi Brandon, I want to hire you immediately!",
+  }]
 }

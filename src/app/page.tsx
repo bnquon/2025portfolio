@@ -4,6 +4,7 @@ import NameTitle from "../../components/home/NameTitle";
 import IntroAndSocials from "../../components/home/IntroAndSocials";
 import AboutPage from "../../components/about/AboutPage";
 import ProjectPage from "../../components/projects/ProjectPage";
+import ReachOutPage from "../../components/reachOut/reachOutPage";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
 
       {/* Projects Section */}
       <ProjectPage />
+
+      {/* Reach Out Section */}
+      <ReachOutPage />
     </>
   );
 }

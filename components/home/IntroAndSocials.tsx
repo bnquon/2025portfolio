@@ -1,7 +1,9 @@
+import { lora } from "@/app/layout";
+
 export default function IntroAndSocials() {
   return (
     <div className="grid grid-cols-[1fr_1fr] mt-auto">
-      <div className="text-6xl">
+      <div className={`${lora.className} text-6xl`}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam
         sed justo vehicula euismod. Nam ultricies purus et orci accumsan
         lobortis.

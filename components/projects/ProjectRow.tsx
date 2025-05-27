@@ -1,3 +1,4 @@
+import { lora } from "@/app/layout";
 import Image from "next/image";
 
 interface ProjectsRowProps {
@@ -27,7 +28,7 @@ export default function ProjectsRow({
 
       {/* Description and image */}
       <div className="w-1/2 relative grid grid-cols-[5fr_3fr] gap-32 h-[360px]">
-        <span className="text-4xl">
+        <span className={`${lora.className} text-4xl`}>
           {description}
         </span>
         <div className="relative w-full h-[65%]">
