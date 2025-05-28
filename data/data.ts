@@ -1,4 +1,18 @@
 export const DATA = {
+  socials: [
+    {
+      url: "#",
+      icon: "faLinkedin"
+    },
+    {
+      url: "#",
+      icon: "faGithub"
+    },
+    {
+      url: "#",
+      icon: "faEnvelope"
+    }
+  ],
   work: [
     {
       company: "Trulioo",
@@ -59,15 +73,21 @@ export const DATA = {
     questionNumber: "(01)",
     question: "What is your name?*",
     placeholder: "John Doe",
+    short: true,
+    name: "name",
   },
   {
     questionNumber: "(02)",
     question: "What is your email address?*",
     placeholder: "johndoe@example.com",
+    short: true,
+    name: "email",
   },
   {
     questionNumber: "(03)",
     question: "What is your message?*",
     placeholder: "Hi Brandon, I want to hire you immediately!",
+    short: false,
+    name: "message",
   }]
 }

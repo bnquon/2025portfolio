@@ -5,6 +5,7 @@ import IntroAndSocials from "../../components/home/IntroAndSocials";
 import AboutPage from "../../components/about/AboutPage";
 import ProjectPage from "../../components/projects/ProjectPage";
 import ReachOutPage from "../../components/reachOut/reachOutPage";
+import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
 
       {/* Reach Out Section */}
       <ReachOutPage />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

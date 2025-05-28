@@ -1,4 +1,14 @@
 import { lora } from "@/app/fonts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { DATA } from "../../data/data";
+
+const ICONS: Record<string, IconDefinition> = {
+  faGithub,
+  faLinkedin,
+  faEnvelope,
+};
 
 export default function IntroAndSocials() {
   return (
@@ -9,9 +19,17 @@ export default function IntroAndSocials() {
         lobortis.
       </div>
       <div className="flex gap-6 ml-auto h-fit mt-auto">
-        <div className="w-[80px] h-[80px] rounded-full bg-red-200" />
-        <div className="w-[80px] h-[80px] rounded-full bg-green-200" />
-        <div className="w-[80px] h-[80px] rounded-full bg-blue-200" />
+        {DATA.socials.map((social, idx) => (
+          <a
+            key={idx}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-[80px] h-[80px] border-[1px] border-black rounded-full flex items-center justify-center"
+          >
+            <FontAwesomeIcon icon={ICONS[social.icon]} size="2x" />
+          </a>
+        ))}
       </div>
     </div>
   );
