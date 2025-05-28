@@ -1,4 +1,8 @@
+import clsx from "clsx";
+import { lora } from "@/app/fonts";
 import { DATA } from "../../data/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface FormRowProps {
   questionNumber: string;
@@ -12,7 +16,7 @@ const FormRow = ({ questionNumber, question, placeholder }: FormRowProps) => {
       <p className="text-2xl">{questionNumber}</p>
       <p className="text-2xl">{question}</p>
       <div className="col-start-2">
-        <input type="text" className="text-2xl w-full" placeholder={placeholder} />
+        <input type="text" className="text-2xl w-full outline-none" placeholder={placeholder} />
       </div>
     </div>
   );
@@ -29,6 +33,10 @@ export default function ReachOutForm() {
           placeholder={question.placeholder}
         />
       ))}
+      <div className="flex justify-start items-center">
+        <p className={clsx(lora.className, "text-4xl font-medium cursor-pointer mr-2")}>SEND</p>
+        <FontAwesomeIcon icon={faArrowRight} size="2x" color="black" />
+      </div>
     </div>
   );
 }

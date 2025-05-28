@@ -1,1 +1,2 @@
 - pass through some url to the project row for the onClick prop
+- rough out the edges with the cursor following button

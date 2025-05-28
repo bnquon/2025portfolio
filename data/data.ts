@@ -57,17 +57,17 @@ export const DATA = {
   ],
   contact: [{
     questionNumber: "(01)",
-    question: "What is your name?",
+    question: "What is your name?*",
     placeholder: "John Doe",
   },
   {
     questionNumber: "(02)",
-    question: "What is your email address?",
+    question: "What is your email address?*",
     placeholder: "johndoe@example.com",
   },
   {
     questionNumber: "(03)",
-    question: "What is your message?",
+    question: "What is your message?*",
     placeholder: "Hi Brandon, I want to hire you immediately!",
   }]
 }
