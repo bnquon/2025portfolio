@@ -1,2 +1,1 @@
-- find sans serif font to use in all big blocks of text
-- button on cursor when hovering project row
+- pass through some url to the project row for the onClick prop

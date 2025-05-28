@@ -1,4 +1,4 @@
-import { lora } from "@/app/layout";
+import { lora } from "@/app/fonts";
 
 export default function About() {
   return (
