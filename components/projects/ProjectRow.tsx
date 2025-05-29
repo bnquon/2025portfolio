@@ -7,6 +7,9 @@ interface ProjectsRowProps {
   techStack: string;
   description: string;
   imageUrl: string;
+  onHover: () => void;
+  onLeave: () => void;
+  onClick: (projectNumber: string) => void;
 }
 
 export default function ProjectsRow({
@@ -14,9 +17,20 @@ export default function ProjectsRow({
   techStack,
   description,
   imageUrl,
+  onHover,
+  onLeave,
+  onClick,
 }: ProjectsRowProps) {
+const handleClick = () => {
+    // Call the passed onClick function with project data
+    onClick(projectNumber);
+  };
+
   return (
     <div
+      onClick={handleClick}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
       className="flex relative border-b-[1px] border-[#d5d5d5]"
     >
       {/* Number and tech stack */}
@@ -35,7 +49,7 @@ export default function ProjectsRow({
             layout="fill"
             objectFit="cover"
             src={imageUrl}
-            alt="Your Image"
+            alt={`Project ${projectNumber}`}
           />
         </div>
       </div>

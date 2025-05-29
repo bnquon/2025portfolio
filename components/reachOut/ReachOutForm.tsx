@@ -97,7 +97,7 @@ export default function ReachOutForm() {
       >
         <button
           onClick={() => form.current?.requestSubmit()}
-          className={clsx(lora.className, "text-4xl font-medium mr-2")}
+          className={clsx(lora.className, "text-4xl font-medium mr-2 cursor-pointer")}
         >
           SEND
         </button>
