@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { config } from '@fortawesome/fontawesome-svg-core'
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { poppins } from "./fonts";
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { Toaster } from "sonner";
+import  LenisProvider from "../../components/LenisProvider";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 
-config.autoAddCss = false
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "BQ 2025",
@@ -18,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <body>{children}</body>
+      <body>
+        <LenisProvider>{children}</LenisProvider>
+      </body>
+
+      <Toaster richColors />
     </html>
   );
 }
