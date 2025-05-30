@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { DATA } from "../../data/data";
 import RevealAnimationWrapper from "../RevealAnimationWrapper";
 
 const ThemeButton = () => {
   return (
-    <div className="rounded-xl bg-black px-5 py-1 flex justify-center items-center">
-      <FontAwesomeIcon icon={faMoon} size="2x" color="white" />
+    <div className="rounded-xl w-[60px] h-[60px] bg-black px-5 py-1 flex justify-center items-center">
+      <FontAwesomeIcon icon={faCode} size="xl" color="white" />
     </div>
   );
 };

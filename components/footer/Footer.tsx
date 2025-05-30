@@ -4,7 +4,7 @@ import PageContainer from "../PageContainer";
 
 export default function Footer() {
   return (
-    <PageContainer >
+    <PageContainer>
       <AutoTextSize maxFontSizePx={400} mode="oneline">
         <p className="font-bold tracking-tight">BRANDON©{new Date().getFullYear()}</p>
       </AutoTextSize>

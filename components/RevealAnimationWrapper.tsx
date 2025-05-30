@@ -21,8 +21,7 @@ export default function RevealAnimationWrapper({
     <motion.div
       className={className}
       initial={{ opacity: 0, y: distance }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ 
         duration, 
         delay,
