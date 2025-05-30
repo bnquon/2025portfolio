@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -30,7 +30,7 @@ export default function ResumeCard({
           layout="fill"
           objectFit="contain"
           src={logoUrl}
-          alt="Your Image"
+          alt="Company Logo"
         />
       </div>
       <div className="flex flex-col">
@@ -38,24 +38,37 @@ export default function ResumeCard({
         <div className="flex justify-between">
           <div>
             <span className="text-xl font-semibold">{companyName}</span>
-            <FontAwesomeIcon
+            <motion.div
+              className="inline-block ml-2 cursor-pointer"
               onClick={() => setIsExpanded(!isExpanded)}
-              className={clsx("ml-2 cursor-pointer", isExpanded ? "rotate-90" : "")}
-              icon={faChevronRight}
-              size="1x"
-              color="black"
-            />
+              animate={{ rotate: isExpanded ? 90 : 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                size="1x"
+                color="black"
+              />
+            </motion.div>
           </div>
           <p className="text-gray-500">{date}</p>
         </div>
         {/* Role */}
         <p>{role}</p>
-        {/* Description IF expanded */}
-        {isExpanded ? (
-          <div className="mt-2">
-            <p>{description}</p>
-          </div>
-        ) : null}
+        {/* Description with smooth animation */}
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, marginTop: 0 }}
+              animate={{ opacity: 1, height: "auto", marginTop: 8 }}
+              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              style={{ overflow: "hidden" }}
+            >
+              <p>{description}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

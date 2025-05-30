@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { DATA } from "../../data/data";
+import RevealAnimationWrapper from "../RevealAnimationWrapper";
 
 const ThemeButton = () => {
   return (
@@ -12,24 +14,23 @@ const ThemeButton = () => {
 const NavItems = () => {
   return (
     <div className="flex gap-6">
-      <div className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 min-w-[200px] text-center">
-        <span className="text-2xl">About</span>
-      </div>
-      <div className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 min-w-[200px] text-center">
-        <span className="text-2xl">Projects</span>
-      </div>
-      <div className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 min-w-[200px] text-center">
-        <span className="text-2xl">Reach Out</span>
-      </div>
+      {DATA.nav.map((item, idx) => (
+        <div
+          key={idx}
+          className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 min-w-[200px] text-center"
+        >
+          <span className="text-2xl">{item.name}</span>
+        </div>
+      ))}
     </div>
   );
 };
 
 export default function NavBar() {
   return (
-    <div className="flex justify-between">
+    <RevealAnimationWrapper distance={-60} delay={1.65} className="flex justify-between">
       <ThemeButton />
       <NavItems />
-    </div>
+    </RevealAnimationWrapper>
   );
 }

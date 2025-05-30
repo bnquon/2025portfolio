@@ -6,6 +6,7 @@ interface PageContainerProps {
   gap?: string;
   paddingTop?: string;
   paddingBottom?: string;
+  className?: string;
 }
 
 export default function PageContainer({
@@ -14,9 +15,10 @@ export default function PageContainer({
   gap = "",
   paddingTop = "",
   paddingBottom = "",
+  className = "",
 }: PageContainerProps) {
   return (
-    <div className={clsx("w-screen relative flex flex-col p-12", height, gap, paddingTop, paddingBottom)}>
+    <div className={clsx("w-screen relative flex flex-col p-12", height, gap, paddingTop, paddingBottom, className)}>
       {children}
     </div>
   );

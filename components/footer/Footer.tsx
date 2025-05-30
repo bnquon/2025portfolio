@@ -1,12 +1,12 @@
 "use client";
-import PageContainer from "../PageContainer";
 import { AutoTextSize } from "auto-text-size";
+import PageContainer from "../PageContainer";
 
 export default function Footer() {
   return (
-    <PageContainer paddingBottom="pb-0">
-      <AutoTextSize maxFontSizePx={300} mode="oneline">
-        <p className="font-semibold">BRANDON © {new Date().getFullYear()} </p>
+    <PageContainer >
+      <AutoTextSize maxFontSizePx={400} mode="oneline">
+        <p className="font-bold tracking-tight">BRANDON©{new Date().getFullYear()}</p>
       </AutoTextSize>
     </PageContainer>
   );

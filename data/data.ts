@@ -1,4 +1,18 @@
 export const DATA = {
+  nav: [
+    {
+      name: "About",
+      url: "#about"
+    },
+    {
+      name: "Projects",
+      url: "#projects"
+    },
+    {
+      name: "Reach Out",
+      url: "#reach-out"
+    }
+  ],
   socials: [
     {
       url: "#",

@@ -6,6 +6,7 @@ import AboutPage from "../../components/about/AboutPage";
 import ProjectPage from "../../components/projects/ProjectPage";
 import ReachOutPage from "../../components/reachOut/reachOutPage";
 import Footer from "../../components/footer/Footer";
+import RevealAnimationWrapper from "../../components/RevealAnimationWrapper";
 
 export default function Home() {
   return (
@@ -16,20 +17,25 @@ export default function Home() {
         <NameTitle />
 
         {/* Line and titles text */}
-        <hr
-          style={{
-            marginTop: "-32px",
-            color: "#d5d5d5",
-          }}
-        />
-        <div className="flex justify-between mt-10 text-4xl">
-          <p>Software Engineer</p>
-          <p>SFU CS Student</p>
-        </div>
+        <RevealAnimationWrapper
+          delay={1.65}
+          className="h-full w-full relative flex flex-col"
+        >
+          <hr
+            style={{
+              marginTop: "-32px",
+              color: "#d5d5d5",
+            }}
+          />
+          <div className="flex justify-between mt-10 text-4xl">
+            <p>Software Engineer</p>
+            <p>SFU CS Student</p>
+          </div>
 
-        <IntroAndSocials />
+          <IntroAndSocials />
+        </RevealAnimationWrapper>
       </PageContainer>
-      
+
       {/* About Section */}
       <AboutPage />
 
