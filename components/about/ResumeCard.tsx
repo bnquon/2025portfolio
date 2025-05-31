@@ -37,7 +37,7 @@ export default function ResumeCard({
         {/* Company Name and Date */}
         <div className="flex sm:flex-row flex-col justify-between">
           <div>
-            <span className="sm:text-xl font-semibold text-lg">{companyName}</span>
+            <span className="sm:text-xl font-semibold text-base">{companyName}</span>
             <motion.div
               className="inline-block ml-2 cursor-pointer"
               onClick={() => setIsExpanded(!isExpanded)}

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Home Page */}
-      <PageContainer height="h-screen">
+      <PageContainer height="sm:h-screen h-[100svh]">
         <NavBar />
         <NameTitle />
 
@@ -22,12 +22,9 @@ export default function Home() {
           className="h-full w-full relative flex flex-col"
         >
           <hr
-            style={{
-              marginTop: "-32px",
-              color: "#d5d5d5",
-            }}
+            className="sm:mt-[-32px] mt-6 bg-[#d5d5d5] w-full "
           />
-          <div className="flex justify-between mt-10 2xl:text-4xl text-2xl">
+          <div className="flex justify-between sm:mt-10 mt-6 2xl:text-4xl sm:text-2xl text-lg">
             <p>Software Engineer</p>
             <p>SFU CS Student</p>
           </div>

@@ -1,3 +1,2 @@
-- following red circle to the cursor
 - intro animation
-- fix the project view icon
+- mobile pill shaped nav

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OutsideOfWork() {
   return (
-    <div className="sm:grid sm:grid-cols-[1fr_1fr] flex flex-col">
+    <div className="sm:grid sm:grid-cols-[1fr_1fr] flex flex-col gap-4 sm:gap-0">
       <p className="2xl:text-2xl sm:text-xl text-lg">(Outside of Work)</p>
       <div className="flex sm:gap-9">
         {DATA.outsideOfWork.map((item) => (
