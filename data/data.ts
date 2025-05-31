@@ -92,7 +92,7 @@ export const DATA = {
   },
   {
     questionNumber: "(02)",
-    question: "What is your email address?*",
+    question: "What is your email?*",
     placeholder: "johndoe@example.com",
     short: true,
     name: "email",

@@ -10,8 +10,14 @@ export default function AutoResizingTextarea({ placeholder, name }: AutoResizing
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     if (textareaRef.current) {
       autosize(textareaRef.current);
+      if (isMobile) {
+        textareaRef.current.rows = 2;
+      } else {
+        textareaRef.current.rows = 1;
+      }
     }
   }, []);
 
@@ -22,7 +28,7 @@ export default function AutoResizingTextarea({ placeholder, name }: AutoResizing
       placeholder={placeholder}
       name={name}
       required
-      rows={1}
     />
   );
 }
+

@@ -23,9 +23,9 @@ export default function ResumeCard({
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
-    <div className="grid grid-cols-[1fr_7fr]">
+    <div className="grid grid-cols-[1fr_7fr] sm:gap-0 gap-3">
       {/* Company Logo */}
-      <div className="relative 2xl:h-[80px] 2xl:w-[80px] sm:h-[60px] sm:w-[60px]">
+      <div className="relative 2xl:h-[80px] 2xl:w-[80px] sm:h-[60px] sm:w-[60px] w-[50px] h-[50px]">
         <Image
           layout="fill"
           objectFit="contain"
@@ -35,9 +35,9 @@ export default function ResumeCard({
       </div>
       <div className="flex flex-col">
         {/* Company Name and Date */}
-        <div className="flex justify-between">
+        <div className="flex sm:flex-row flex-col justify-between">
           <div>
-            <span className="text-xl font-semibold">{companyName}</span>
+            <span className="sm:text-xl font-semibold text-lg">{companyName}</span>
             <motion.div
               className="inline-block ml-2 cursor-pointer"
               onClick={() => setIsExpanded(!isExpanded)}
@@ -46,15 +46,15 @@ export default function ResumeCard({
             >
               <FontAwesomeIcon
                 icon={faChevronRight}
-                size="1x"
                 color="black"
+                className="sm:text-lg text-sm"
               />
             </motion.div>
           </div>
-          <p className="text-gray-500">{date}</p>
+          <p className="text-gray-500 sm:text-base text-sm">{date}</p>
         </div>
         {/* Role */}
-        <p>{role}</p>
+        <p className="sm:text-base text-sm">{role}</p>
         {/* Description with smooth animation */}
         <AnimatePresence>
           {isExpanded && (
@@ -65,7 +65,7 @@ export default function ResumeCard({
               transition={{ duration: 0.3, ease: "easeOut" }}
               style={{ overflow: "hidden" }}
             >
-              <p>{description}</p>
+              <p className="sm:text-base text-sm">{description}</p>
             </motion.div>
           )}
         </AnimatePresence>

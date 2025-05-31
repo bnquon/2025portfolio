@@ -28,7 +28,7 @@ const NavItems = () => {
 
 export default function NavBar() {
   return (
-    <RevealAnimationWrapper distance={-60} delay={1.65} className="flex justify-between">
+    <RevealAnimationWrapper distance={-60} delay={1.65} className="justify-between sm:flex hidden">
       <ThemeButton />
       <NavItems />
     </RevealAnimationWrapper>

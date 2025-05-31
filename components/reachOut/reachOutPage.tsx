@@ -4,11 +4,11 @@ import ReachOutForm from "./ReachOutForm";
 export default function ReachOutPage() {
   return (
     <PageContainer>
-      <div className="flex w-full relative">
-        <div className="w-1/2">
-          <span className="2xl:text-4xl text-3xl">(Reach Out)</span>
+      <div className="sm:flex w-full relative">
+        <div className="sm:w-1/2 sm:mb-0 mb-6">
+          <span className="2xl:text-4xl sm:text-3xl text-2xl">(Reach Out)</span>
         </div>
-        <div className="w-1/2">
+        <div className="sm:w-1/2">
           <ReachOutForm />
         </div>
       </div>

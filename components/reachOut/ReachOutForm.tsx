@@ -25,17 +25,17 @@ const FormRow = ({
 }: FormRowProps) => {
   return (
     <div className="w-full flex border-b-[1px] gap-8 pb-4 border-[#d5d5d5]">
-      <p className="2xl:text-2xl sm:text-xl">{questionNumber}</p>
+      <p className="2xl:text-2xl sm:text-xl text-lg">{questionNumber}</p>
       <div className="flex flex-col w-full gap-4">
         <div className="h-fit">
-          <p className="2xl:text-2xl sm:text-xl">{question}</p>
+          <p className="2xl:text-2xl sm:text-xl text-lg">{question}</p>
         </div>
         <div className="col-start-2">
           {isShort ? (
             <input
               type="text"
               required
-              className="2xl:text-2xl sm:text-xl w-full outline-none"
+              className="2xl:text-2xl sm:text-xl text-lg w-full outline-none"
               placeholder={placeholder}
               name={name}
             />
@@ -75,7 +75,7 @@ export default function ReachOutForm() {
   };
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col sm:gap-10 gap-6">
       <form action="" onSubmit={onSubmit} ref={form} className="w-full flex flex-col gap-10">
         {DATA.contact.map((question) => (
           <div key={question.questionNumber} className="w-full">
@@ -97,11 +97,11 @@ export default function ReachOutForm() {
       >
         <button
           onClick={() => form.current?.requestSubmit()}
-          className={clsx(lora.className, "2xl:text-4xl sm:text-3xl font-medium mr-2 cursor-pointer")}
+          className={clsx(lora.className, "2xl:text-4xl sm:text-3xl text-2xl font-medium mr-2 cursor-pointer")}
         >
           SEND
         </button>
-        <FontAwesomeIcon icon={faArrowRight} size="2x" color="black" />
+        <FontAwesomeIcon icon={faArrowRight} className="2xl:text-2xl text-xl" color="black" />
         <hr
           style={{
             width: isHovering ? "100%" : "0%",
