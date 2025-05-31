@@ -5,7 +5,7 @@ import RevealAnimationWrapper from "../RevealAnimationWrapper";
 
 const ThemeButton = () => {
   return (
-    <div className="rounded-xl w-[60px] h-[60px] bg-black px-5 py-1 flex justify-center items-center">
+    <div className="rounded-xl sm:w-[50px] sm:h-[50px] bg-black px-5 py-1 flex justify-center items-center">
       <FontAwesomeIcon icon={faCode} size="xl" color="white" />
     </div>
   );
@@ -17,9 +17,9 @@ const NavItems = () => {
       {DATA.nav.map((item, idx) => (
         <div
           key={idx}
-          className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 min-w-[200px] text-center"
+          className="rounded-4xl border-[1px] border-gray-500 px-6 py-3 sm:py-2 2xl:py-3 sm:min-w-[165px] 2xl:min-w-[200px] flex items-center justify-center"
         >
-          <span className="text-2xl">{item.name}</span>
+          <span className="2xl:text-2xl text-xl">{item.name}</span>
         </div>
       ))}
     </div>

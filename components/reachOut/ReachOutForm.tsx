@@ -25,17 +25,17 @@ const FormRow = ({
 }: FormRowProps) => {
   return (
     <div className="w-full flex border-b-[1px] gap-8 pb-4 border-[#d5d5d5]">
-      <p className="text-2xl">{questionNumber}</p>
+      <p className="2xl:text-2xl sm:text-xl">{questionNumber}</p>
       <div className="flex flex-col w-full gap-4">
         <div className="h-fit">
-          <p className="text-2xl">{question}</p>
+          <p className="2xl:text-2xl sm:text-xl">{question}</p>
         </div>
         <div className="col-start-2">
           {isShort ? (
             <input
               type="text"
               required
-              className="text-2xl w-full outline-none"
+              className="2xl:text-2xl sm:text-xl w-full outline-none"
               placeholder={placeholder}
               name={name}
             />
@@ -97,7 +97,7 @@ export default function ReachOutForm() {
       >
         <button
           onClick={() => form.current?.requestSubmit()}
-          className={clsx(lora.className, "text-4xl font-medium mr-2 cursor-pointer")}
+          className={clsx(lora.className, "2xl:text-4xl sm:text-3xl font-medium mr-2 cursor-pointer")}
         >
           SEND
         </button>

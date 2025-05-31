@@ -35,16 +35,16 @@ const handleClick = () => {
     >
       {/* Number and tech stack */}
       <div className="flex w-1/2">
-        <span className="text-2xl">{projectNumber}</span>
+        <span className="2xl:text-2xl text-xl">{projectNumber}</span>
         <div className="w-full relative flex justify-center">
-          <span className="block max-w-[33%] text-2xl">{techStack}</span>
+          <span className="block 2xl:max-w-[33%] sm:max-w-[66%] 2xl:text-2xl sm:text-xl">{techStack}</span>
         </div>
       </div>
 
       {/* Description and image */}
-      <div className="w-1/2 relative grid grid-cols-[5fr_3fr] gap-32 h-[360px]">
-        <span className={clsx(lora.className, "text-4xl")}>{description}</span>
-        <div className="relative w-full h-[65%]">
+      <div className="w-1/2 relative grid 2xl:grid-cols-[5fr_3fr] sm:grid-cols-[6fr_5fr] 2xl:gap-32 sm:gap-12 h-[360px]">
+        <span className={clsx(lora.className, "2xl:text-4xl sm:text-3xl")}>{description}</span>
+        <div className="relative w-full 2xl:h-[65%] sm:h-[50%]">
           <Image
             layout="fill"
             objectFit="cover"

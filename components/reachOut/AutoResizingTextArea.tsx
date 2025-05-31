@@ -18,7 +18,7 @@ export default function AutoResizingTextarea({ placeholder, name }: AutoResizing
   return (
     <textarea
       ref={textareaRef}
-      className="w-full text-2xl outline-none"
+      className="w-full 2xl:text-2xl sm:text-xl outline-none"
       placeholder={placeholder}
       name={name}
       required

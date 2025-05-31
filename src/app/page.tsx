@@ -27,7 +27,7 @@ export default function Home() {
               color: "#d5d5d5",
             }}
           />
-          <div className="flex justify-between mt-10 text-4xl">
+          <div className="flex justify-between mt-10 2xl:text-4xl text-2xl">
             <p>Software Engineer</p>
             <p>SFU CS Student</p>
           </div>

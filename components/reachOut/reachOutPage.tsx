@@ -6,7 +6,7 @@ export default function ReachOutPage() {
     <PageContainer>
       <div className="flex w-full relative">
         <div className="w-1/2">
-          <span className="text-4xl">(Reach Out)</span>
+          <span className="2xl:text-4xl text-3xl">(Reach Out)</span>
         </div>
         <div className="w-1/2">
           <ReachOutForm />

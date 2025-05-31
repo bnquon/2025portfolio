@@ -25,7 +25,7 @@ export default function ResumeCard({
   return (
     <div className="grid grid-cols-[1fr_7fr]">
       {/* Company Logo */}
-      <div className="relative h-[80px] w-[80px]">
+      <div className="relative 2xl:h-[80px] 2xl:w-[80px] sm:h-[60px] sm:w-[60px]">
         <Image
           layout="fill"
           objectFit="contain"
