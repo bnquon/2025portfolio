@@ -43,14 +43,14 @@ export default function NameTitle() {
       </div>
 
       {/* Desktop layout: single row (sm and up) */}
-      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] items-center">
+      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] items-center scale-y-105">
         <TextAnimate
           once
           startOnView={false}
           delay={0.5}
           by="character"
           duration={0.35}
-          className="text-[clamp(3rem,10vw,16rem)] font-bold tracking-tight flex-shrink flex-grow"
+          className="text-[clamp(3rem,10.25vw,16rem)] font-bold tracking-tight flex-shrink flex-grow"
         >
           BRANDON
         </TextAnimate>

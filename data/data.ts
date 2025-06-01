@@ -1,6 +1,10 @@
 export const DATA = {
   nav: [
     {
+      name: "Home",
+      url: "#"
+    },
+    {
       name: "About",
       url: "#about"
     },
