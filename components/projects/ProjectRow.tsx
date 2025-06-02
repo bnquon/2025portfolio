@@ -36,7 +36,7 @@ export default function ProjectsRow({
       {/* Number and tech stack */}
       <div className="flex sm:w-1/2 sm:flex-row flex-col sm:gap-0 gap-4">
         <span className="2xl:text-2xl sm:text-xl text-lg">{projectNumber}</span>
-        <div className="w-full relative flex justify-center">
+        <div className="w-full relative flex sm:justify-center">
           <span className="block 2xl:max-w-[33%] sm:max-w-[66%] 2xl:text-2xl sm:text-xl">
             {techStack}
           </span>

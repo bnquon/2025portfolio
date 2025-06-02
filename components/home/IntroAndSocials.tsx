@@ -25,9 +25,9 @@ export default function IntroAndSocials() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="2xl:w-[80px] 2xl:h-[80px] sm:w-[60px] sm:h-[60px] h-[50px] w-[50px] border-[1px] border-black rounded-full flex items-center justify-center"
+            className="sm:w-[60px] sm:h-[60px] h-[50px] w-[50px] border-[1px] border-black rounded-full flex items-center justify-center"
           >
-            <FontAwesomeIcon icon={ICONS[social.icon]} className="2xl:text-4xl sm:text-2xl text-xl" />
+            <FontAwesomeIcon icon={ICONS[social.icon]} className="sm:text-2xl text-xl" />
           </a>
         ))}
       </div>

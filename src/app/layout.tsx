@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { poppins } from "./fonts";
 import { Toaster } from "sonner";
@@ -9,8 +10,25 @@ import "./globals.css";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "BQ 2025",
-  description: "Brandon Quon's Portfolio",
+  title: "Brandon Quon's Portfolio",
+  description:
+    "I'm Brandon Quon, a CS student at Simon Fraser University who enjoys building things and solving problems. Currently gaining real-world experience through multiple co-op terms and always looking for the next interesting project.",
+  openGraph: {
+    title: "Brandon Quon's Portfolio",
+    description:
+      "I'm Brandon Quon, a CS student at Simon Fraser University who enjoys building things and solving problems. Currently gaining real-world experience through multiple co-op terms and always looking for the next interesting project.",
+    url: "http://localhost:3000",
+    siteName: "Brandon Quon's Portfolio",
+    images: [
+      {
+        url: "/og-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Brandon Quon's Portfolio Open Graph Preview", 
+      }
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <head>
+      <Head>
+        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      </Head>
       <body>
         <LenisProvider>{children}</LenisProvider>
         <Toaster richColors />

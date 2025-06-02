@@ -7,7 +7,7 @@ import { AutoTextSize } from "auto-text-size";
 
 export default function NameTitle() {
   return (
-    <div className="w-full">
+    <div className="w-full sm:mt-8 mt-16 xl:mt-4 2xl:mt-4 @min-3xl:mt-0">
       {/* Mobile layout: stacked rows */}
       <div className="flex flex-col gap-2 sm:hidden">
         {/* Row 1: BRANDON QUON */}

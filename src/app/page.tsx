@@ -14,7 +14,9 @@ export default function Home() {
       {/* Home Page */}
       <PageContainer height="sm:h-screen h-[100svh]">
         <NavBar />
-        <NameTitle />
+        <section id="#">
+          <NameTitle />
+        </section>
 
         {/* Line and titles text */}
         <RevealAnimationWrapper
