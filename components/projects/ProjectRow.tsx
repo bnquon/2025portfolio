@@ -48,7 +48,7 @@ export default function ProjectsRow({
         <span
           className={clsx(
             lora.className,
-            "2xl:text-4xl sm:text-3xl sm:leading-[34px] 2xl:leading-10 text-2xl leading-[26px]"
+            "2xl:text-4xl sm:text-3xl sm:leading-[34px] 2xl:leading-10 text-xl leading-[24px]"
           )}
         >
           {description}

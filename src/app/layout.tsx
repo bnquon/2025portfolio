@@ -12,11 +12,11 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Brandon Quon's Portfolio",
   description:
-    "I'm Brandon Quon, a CS student at Simon Fraser University who enjoys building things and solving problems. Currently gaining real-world experience through multiple co-op terms and always looking for the next interesting project.",
+    "I'm Brandon, CS student at SFU and currently interning at Trulioo. Outside of code, you'll find me lifting weights or getting lost in Night City.",
   openGraph: {
     title: "Brandon Quon's Portfolio",
     description:
-      "I'm Brandon Quon, a CS student at Simon Fraser University who enjoys building things and solving problems. Currently gaining real-world experience through multiple co-op terms and always looking for the next interesting project.",
+      "I'm Brandon, CS student at SFU and currently interning at Trulioo. Outside of code, you'll find me lifting weights or getting lost in Night City.",
     url: "http://localhost:3000",
     siteName: "Brandon Quon's Portfolio",
     images: [
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
         url: "/og-preview.png",
         width: 1200,
         height: 630,
-        alt: "Brandon Quon's Portfolio Open Graph Preview", 
-      }
+        alt: "Brandon Quon's Portfolio Open Graph Preview",
+      },
     ],
     type: "website",
   },
@@ -39,7 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <Head>
-        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/png"
+          sizes="32x32"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>

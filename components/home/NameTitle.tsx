@@ -7,18 +7,25 @@ import { AutoTextSize } from "auto-text-size";
 
 export default function NameTitle() {
   return (
-    <div className="w-full sm:mt-8 mt-16 xl:mt-4 2xl:mt-4 @min-3xl:mt-0">
+    <div className="w-full sm:mt-8 mt-16 2xl:mt-4 @min-3xl:mt-0">
       {/* Mobile layout: stacked rows */}
       <div className="flex flex-col gap-2 sm:hidden">
         {/* Row 1: BRANDON QUON */}
-        <div className="h-fit">
+        <motion.div 
+          className="h-fit"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.5,
+            duration: 0.85,
+            ease: "easeOut"
+          }}
+        >
           <AutoTextSize maxFontSizePx={400} mode="oneline">
             <p className="font-bold tracking-tight">BRANDON QUON</p>
           </AutoTextSize>
-        </div>
-
+        </motion.div>
         {/* Row 2: Image only */}
-
         <div className="w-full h-[150px] relative">
           <motion.div
             initial={{ scale: 0 }}
@@ -41,7 +48,6 @@ export default function NameTitle() {
           </motion.div>
         </div>
       </div>
-
       {/* Desktop layout: single row (sm and up) */}
       <div className="hidden sm:grid grid-cols-[auto_1fr_auto] items-center scale-y-105">
         <TextAnimate
