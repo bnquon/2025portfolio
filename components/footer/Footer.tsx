@@ -12,7 +12,7 @@ export default function Footer() {
           BRANDON©{new Date().getFullYear()}
         </p>
         <div className="flex justify-between w-full absolute top-[85%] text-sm">
-          <p>CREATED BY ME 🧑🏻‍💻</p>
+          <p>CREATED IN REACT 🧑🏻‍💻</p>
           <a href="#" className="flex items-center">
             <FontAwesomeIcon icon={faSquareCaretUp} />
             <p className="ml-2">BACK TO TOP</p>

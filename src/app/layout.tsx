@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { poppins } from "./fonts";
 import { Toaster } from "sonner";
@@ -14,11 +13,22 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Brandon Quon's Portfolio",
   description:
-    "I'm Brandon, CS student at SFU and currently interning at Trulioo. Outside of code, you'll find me lifting weights or getting lost in Night City.",
+    "I'm Brandon, a software engineer and Computer Science student at SFU, currently interning at Trulioo. Explore my portfolio to see my projects and to learn more about me.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Brandon Quon's Portfolio",
     description:
-      "I'm Brandon, CS student at SFU and currently interning at Trulioo. Outside of code, you'll find me lifting weights or getting lost in Night City.",
+      "I'm Brandon, a software engineer and Computer Science student at SFU, currently interning at Trulioo. Explore my portfolio to see my projects and to learn more about me.",
     url: "https://2025portfolio-sepia.vercel.app/",
     siteName: "Brandon Quon's Portfolio",
     images: [
@@ -40,15 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <Head>
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/png"
-          sizes="32x32"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <body>
         <LenisProvider>
           <NavBar />

@@ -1,2 +1,6 @@
-- update project data object to have extra info to display on the specific page
-- update page component to render new path location 
+- fix project page not always scrolling back to top
+- maybe add loading images for the projects
+  - better props for Image tags
+- Buy domain
+
+- Fill in actual data
