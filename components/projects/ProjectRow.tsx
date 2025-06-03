@@ -28,7 +28,7 @@ export default function ProjectsRow({
   return (
     <div
       onClick={handleClick}
-      className="flex sm:flex-row flex-col sm:gap-0 gap-4 sm:pb-0 pb-8 relative border-b-[1px] border-[#d5d5d5] cursor-pointer"
+      className="flex sm:flex-row flex-col sm:gap-0 gap-4 py-12 sm:pb-0 pb-8 relative border-b-[1px] border-[#d5d5d5] cursor-pointer"
     >
       {/* Number and tech stack */}
       <div className="flex sm:w-1/2 sm:flex-row flex-col sm:gap-0 gap-4">

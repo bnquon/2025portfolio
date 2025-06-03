@@ -6,15 +6,16 @@ import ProjectsRow from "./ProjectRow";
 
 export default function ProjectTable() {
   const [isHovering, setIsHovering] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
   return (
     <div
-      className="flex flex-col gap-12"
+      className="flex flex-col"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Only have this on desktop or laptop */}
-      <HoverIcon isHovering={isHovering} />
+      {!isMobile && <HoverIcon isHovering={isHovering} />}
 
       {DATA.projects.map((project) => (
         <ProjectsRow

@@ -67,12 +67,11 @@ export default function HoverIcon({
         translateX: "-50%",
         translateY: "-50%",
       }}
-      className="fixed top-0 left-0 cursor-pointer w-[80px] h-[80px] bg-black rounded-full flex justify-center items-center z-10 pointer-events-none"
+      className="fixed top-0 left-0 cursor-pointer 2xl:w-[80px] 2xl:h-[80px] sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center z-10 pointer-events-none"
     >
       <FontAwesomeIcon
         icon={faArrowUp}
-        className="rotate-45"
-        size="2x"
+        className="rotate-45 2xl:text-4xl sm:text-2xl text-xl"
         color="white"
       />
     </motion.div>
