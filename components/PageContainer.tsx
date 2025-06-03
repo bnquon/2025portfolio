@@ -18,7 +18,7 @@ export default function PageContainer({
   className = "",
 }: PageContainerProps) {
   return (
-    <div className={clsx("w-screen relative flex flex-col sm:p-12 p-6", height, gap, paddingTop, paddingBottom, className)}>
+    <div className={clsx("w-screen relative flex flex-col sm:py-12 sm:px-[7.5vw] p-6", height, gap, paddingTop, paddingBottom, className)}>
       {children}
     </div>
   );

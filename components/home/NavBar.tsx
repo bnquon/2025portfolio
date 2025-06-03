@@ -6,18 +6,18 @@ import RevealAnimationWrapper from "../RevealAnimationWrapper";
 
 const NavItems = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   const handleNavClick = (item: { name: string; url: string }) => {
-    window.location.href = item.url;
+    window.location.replace(item.url);
     setIsDropdownOpen(false);
   };
 
   return (
-    <div className="flex justify-between w-full sm:px-12 px-6">
+    <div className="flex justify-between w-full sm:px-[7.5vw] px-6">
       <div className="sm:text-xl h-fit text-lg font-bold rounded-xl bg-[#e5e5e5]/70 backdrop-blur-sm px-4 py-3">
         B.Q
       </div>
@@ -62,7 +62,7 @@ export default function NavBar() {
     <RevealAnimationWrapper
       distance={-60}
       delay={1.65}
-      className="fixed left-0 w-full z-[9999] mb-6"
+      className="fixed left-0 mt-10 w-full z-[9999] mb-6"
     >
       <NavItems />
     </RevealAnimationWrapper>

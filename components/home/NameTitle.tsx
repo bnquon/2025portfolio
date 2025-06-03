@@ -7,7 +7,7 @@ import { AutoTextSize } from "auto-text-size";
 
 export default function NameTitle() {
   return (
-    <div className="w-full sm:mt-8 mt-16 2xl:mt-4 @min-3xl:mt-0">
+    <div className="w-full sm:mt-12 mt-16 2xl:mt-4 @min-3xl:mt-0">
       {/* Mobile layout: stacked rows */}
       <div className="flex flex-col gap-2 sm:hidden">
         {/* Row 1: BRANDON QUON */}
@@ -49,14 +49,14 @@ export default function NameTitle() {
         </div>
       </div>
       {/* Desktop layout: single row (sm and up) */}
-      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] items-center scale-y-105">
+      <div className="hidden sm:grid grid-cols-[auto_1fr_auto] items-center">
         <TextAnimate
           once
           startOnView={false}
           delay={0.5}
           by="character"
           duration={0.35}
-          className="text-[clamp(3rem,10.25vw,16rem)] font-bold tracking-tight flex-shrink flex-grow"
+          className="text-[clamp(3rem,9vw,16rem)] font-bold tracking-tight flex-shrink flex-grow scale-y-110"
         >
           BRANDON
         </TextAnimate>
@@ -87,7 +87,7 @@ export default function NameTitle() {
           delay={0.8}
           by="character"
           duration={0.35}
-          className="text-[clamp(3rem,10vw,16rem)] font-bold tracking-tight flex-shrink flex-grow"
+          className="text-[clamp(3rem,9vw,16rem)] font-bold tracking-tight flex-shrink flex-grow scale-y-110"
         >
           QUON
         </TextAnimate>

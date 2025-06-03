@@ -1,1 +1,2 @@
-- intro animation
+- update project data object to have extra info to display on the specific page
+- update page component to render new path location 

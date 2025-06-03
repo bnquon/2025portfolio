@@ -6,15 +6,10 @@ import { useState, useRef, useEffect } from "react";
 
 interface HoverIconProps {
   isHovering: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  hoveredProject: any;
-  onClick: (projectNumber: string) => void;
 }
 
 export default function HoverIcon({
   isHovering,
-  hoveredProject,
-  onClick,
 }: HoverIconProps) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -48,7 +43,6 @@ export default function HoverIcon({
 
   return (
     <motion.div
-      onClick={() => onClick(hoveredProject)}
       animate={{
         x: cursorPos.x,
         y: cursorPos.y,

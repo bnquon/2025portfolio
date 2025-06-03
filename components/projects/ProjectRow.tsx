@@ -1,37 +1,34 @@
 import { lora } from "@/app/fonts";
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface ProjectsRowProps {
   projectNumber: string;
   techStack: string;
-  description: string;
+  summary: string;
   imageUrl: string;
-  onHover: () => void;
-  onLeave: () => void;
-  onClick: (projectNumber: string) => void;
 }
 
 export default function ProjectsRow({
   projectNumber,
   techStack,
-  description,
+  summary,
   imageUrl,
-  onHover,
-  onLeave,
-  onClick,
 }: ProjectsRowProps) {
+  const router = useRouter();
+
   const handleClick = () => {
-    // Call the passed onClick function with project data
-    onClick(projectNumber);
+    // Navigate to project details page with project number in URL
+    // Remove parentheses from project number for cleaner URL
+    const cleanProjectNumber = projectNumber.replace(/[()]/g, '');
+    router.push(`/projects/${cleanProjectNumber}`);
   };
 
   return (
     <div
       onClick={handleClick}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-      className="flex sm:flex-row flex-col sm:gap-0 gap-4 sm:pb-0 pb-8 relative border-b-[1px] border-[#d5d5d5]"
+      className="flex sm:flex-row flex-col sm:gap-0 gap-4 sm:pb-0 pb-8 relative border-b-[1px] border-[#d5d5d5] cursor-pointer"
     >
       {/* Number and tech stack */}
       <div className="flex sm:w-1/2 sm:flex-row flex-col sm:gap-0 gap-4">
@@ -42,21 +39,20 @@ export default function ProjectsRow({
           </span>
         </div>
       </div>
-
       {/* Description and image */}
       <div className="sm:w-1/2 relative flex flex-col gap-4 sm:grid 2xl:grid-cols-[5fr_3fr] sm:grid-cols-[6fr_5fr] 2xl:gap-32 sm:gap-12 h-[360px]">
         <span
           className={clsx(
             lora.className,
-            "2xl:text-4xl sm:text-3xl sm:leading-[34px] 2xl:leading-10 text-xl leading-[24px]"
+            "2xl:text-4xl sm:text-3xl text-2xl"
           )}
         >
-          {description}
+          {summary}
         </span>
         <div className="relative w-full 2xl:h-[65%] sm:h-[50%] h-[100%]">
           <Image
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             src={imageUrl}
             alt={`Project ${projectNumber}`}
           />
