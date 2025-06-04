@@ -13,10 +13,8 @@ const ICONS: Record<string, IconDefinition> = {
 export default function IntroAndSocials() {
   return (
     <div className="sm:grid sm:grid-cols-[1fr_1fr] sm:gap-0 gap-4 flex flex-col mt-auto">
-      <div className={`${lora.className} 2xl:text-5xl sm:text-4xl text-2xl sm:leading-none leading-[24px]`}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget diam
-        sed justo vehicula euismod. Nam ultricies purus et orci accumsan
-        lobortis.
+      <div className={`${lora.className} 2xl:text-5xl sm:text-4xl text-3xl 2xl:leading-[60px] xl:leading-[48px] leading-[40px] sm:mt-0 mt-20`}>
+        {DATA.homeIntro}
       </div>
       <div className="flex gap-6 sm:ml-auto h-fit mt-auto">
         {DATA.socials.map((social, idx) => (

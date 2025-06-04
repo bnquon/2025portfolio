@@ -1,24 +1,24 @@
 "use client";
 import Image from "next/image";
 import { motion } from "motion/react";
-import placeHolderImage from "../../public/placeholder.jpg";
+import WillUpdateSoon from "../../public/WillUpdateSoon.webp";
 import { TextAnimate } from "../text-animate";
 import { AutoTextSize } from "auto-text-size";
 
 export default function NameTitle() {
   return (
-    <div className="w-full sm:mt-12 mt-16 2xl:mt-4 @min-3xl:mt-0">
+    <div className="w-full sm:mt-12 mt-20 2xl:mt-4 @min-3xl:mt-0">
       {/* Mobile layout: stacked rows */}
       <div className="flex flex-col gap-2 sm:hidden">
         {/* Row 1: BRANDON QUON */}
-        <motion.div 
+        <motion.div
           className="h-fit"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: 0.5,
             duration: 0.85,
-            ease: "easeOut"
+            ease: "easeOut",
           }}
         >
           <AutoTextSize maxFontSizePx={400} mode="oneline">
@@ -40,10 +40,11 @@ export default function NameTitle() {
             className="w-full h-full"
           >
             <Image
-              layout="fill"
-              objectFit="cover"
-              src={placeHolderImage}
-              alt="Your Image"
+              fill
+              className="object-cover"
+              src={WillUpdateSoon}
+              alt="Header Image"
+              priority
             />
           </motion.div>
         </div>
@@ -74,10 +75,10 @@ export default function NameTitle() {
             className="w-full h-full"
           >
             <Image
-              layout="fill"
-              objectFit="cover"
-              src={placeHolderImage}
-              alt="Your Image"
+              fill
+              className="object-cover"
+              src={WillUpdateSoon}
+              alt="Header Image"
             />
           </motion.div>
         </div>

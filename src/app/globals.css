@@ -7,8 +7,18 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  touch-action: pan-y;
 }
 
 @theme inline {

@@ -45,28 +45,25 @@ export default function ProjectDetailsPage({
   return (
     <PageContainer paddingTop="sm:pt-32 pt-28">
       <RevealAnimationWrapper delay={0.5} duration={0.5}>
-        <div className="flex w-full border-b-[1px] border-[#d5d5d5] font-semibold 2xl:mb-16 text-xl 2xl:pb-8 pb-8 mb-8">
+        <div className="flex w-full border-b-[1px] border-[#d5d5d5] font-semibold 2xl:mb-16 sm:text-2xl text-lg 2xl:pb-8 pb-8 mb-8">
           <p>{project.title}</p>
         </div>
       </RevealAnimationWrapper>
 
       <RevealAnimationWrapper delay={1} duration={0.5} distance={50}>
         <div className="flex sm:flex-row-reverse flex-col w-full">
-          <div className="flex flex-col sm:w-1/2 w-full relative p-6 gap-3 sm:p-20 sm:gap-10 bg-black">
-            <Image
-              width={1200}
-              height={800}
-              src="/sfueamock1.webp"
-              alt="Project Image 1"
-              className="w-full h-auto"
-            />
-            <Image
-              width={1500}
-              height={1000}
-              src="/sfueamock2.webp"
-              alt="Project Image 2"
-              className="w-full h-auto"
-            />
+          <div className="flex flex-col sm:w-1/2 w-full relative p-6 gap-3 sm:p-20 sm:gap-10 bg-black h-fit">
+            {project.mockUpImages.map((image, index) => (
+              <Image
+                key={index}
+                width={1200}
+                height={800}
+                src={image}
+                alt={`Project Image ${index + 1}`}
+                className="w-full h-auto"
+                priority
+              />
+            ))}
           </div>
 
           <div className="sm:w-1/2 w-full flex flex-col 2xl:pr-8 sm:pr-4 sm:mt-0 mt-8">
@@ -80,9 +77,9 @@ export default function ProjectDetailsPage({
                     className="flex w-full border-b-[1px] border-[#d5d5d5] pb-8"
                   >
                     <div className="w-1/2">
-                      <p className="font-semibold text-xl">{label}</p>
+                      <p className="font-semibold sm:text-xl text-base">{label}</p>
                     </div>
-                    <div className="w-1/2 uppercase text-xl text-[#868686]">
+                    <div className="w-1/2 uppercase sm:text-xl text-base text-[#868686]">
                       {key === "link" ? (
                         <a
                           href={value as string}
@@ -90,7 +87,7 @@ export default function ProjectDetailsPage({
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {value as string}
+                          GitHub
                         </a>
                       ) : key === "techStack" ? (
                         <div className="flex flex-col">
@@ -107,7 +104,7 @@ export default function ProjectDetailsPage({
               })}
             </div>
 
-            <div className="2xl:text-4xl sm:text-3xl sm:leading-[34px] 2xl:leading-10 text-2xl leading-[28px] 2xl:my-20 sm:my-16 my-8">
+            <div className="2xl:text-4xl sm:text-3xl 2xl:leading-[48px] text-2xl sm:leading-[40px] leading-[32px] 2xl:my-20 sm:my-16 my-8">
               <p className={`${lora.className}`}>{project.fullDescription}</p>
             </div>
             <BackToHome />

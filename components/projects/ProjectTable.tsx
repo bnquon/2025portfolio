@@ -33,7 +33,7 @@ export default function ProjectTable() {
           projectNumber={project.projectNumber}
           techStack={project.techStack}
           summary={project.summary}
-          imageUrl={project.imageUrl}
+          previewUrl={project.previewUrl}
         />
       ))}
     </div>

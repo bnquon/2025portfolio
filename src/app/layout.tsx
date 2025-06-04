@@ -11,6 +11,7 @@ import Footer from "../../components/footer/Footer";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://2025portfolio-sepia.vercel.app"),
   title: "Brandon Quon's Portfolio",
   description:
     "I'm Brandon, a software engineer and Computer Science student at SFU, currently interning at Trulioo. Explore my portfolio to see my projects and to learn more about me.",
@@ -29,7 +30,6 @@ export const metadata: Metadata = {
     title: "Brandon Quon's Portfolio",
     description:
       "I'm Brandon, a software engineer and Computer Science student at SFU, currently interning at Trulioo. Explore my portfolio to see my projects and to learn more about me.",
-    url: "https://2025portfolio-sepia.vercel.app/",
     siteName: "Brandon Quon's Portfolio",
     images: [
       {

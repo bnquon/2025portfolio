@@ -10,7 +10,7 @@ interface ResumeCardProps {
   companyName: string;
   date: string;
   role: string;
-  description: string;
+  description: string[];
 }
 
 export default function ResumeCard({
@@ -26,18 +26,15 @@ export default function ResumeCard({
     <div className="grid grid-cols-[1fr_7fr] sm:gap-0 gap-3">
       {/* Company Logo */}
       <div className="relative 2xl:h-[80px] 2xl:w-[80px] sm:h-[60px] sm:w-[60px] w-[50px] h-[50px]">
-        <Image
-          layout="fill"
-          objectFit="contain"
-          src={logoUrl}
-          alt="Company Logo"
-        />
+        <Image fill className="object-cover" src={logoUrl} alt={`${companyName} logo`} />
       </div>
       <div className="flex flex-col">
         {/* Company Name and Date */}
         <div className="flex sm:flex-row flex-col justify-between">
           <div>
-            <span className="sm:text-xl font-semibold text-base">{companyName}</span>
+            <span className="sm:text-xl font-semibold text-base">
+              {companyName}
+            </span>
             <motion.div
               className="inline-block ml-2 cursor-pointer"
               onClick={() => setIsExpanded(!isExpanded)}
@@ -55,7 +52,7 @@ export default function ResumeCard({
         </div>
         {/* Role */}
         <p className="sm:text-base text-sm">{role}</p>
-        {/* Description with smooth animation */}
+        {/* Description */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -65,7 +62,11 @@ export default function ResumeCard({
               transition={{ duration: 0.3, ease: "easeOut" }}
               style={{ overflow: "hidden" }}
             >
-              <p className="sm:text-base text-sm">{description}</p>
+              <ul className="sm:text-base text-sm list-disc list-inside space-y-1">
+                {description.map((bullet: string, index: number) => (
+                  <li key={index}>{bullet}</li>
+                ))}
+              </ul>
             </motion.div>
           )}
         </AnimatePresence>
