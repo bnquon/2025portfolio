@@ -17,7 +17,7 @@ const NavItems = () => {
   };
 
   return (
-    <div className="flex justify-between w-full sm:px-[7.5vw] px-6">
+    <div className="flex justify-between sm:px-[7.5%] px-6 w-screen">
       <div className="sm:text-xl h-fit text-lg font-bold rounded-xl bg-[#e5e5e5]/70 backdrop-blur-sm px-4 py-3">
         B.Q
       </div>

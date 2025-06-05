@@ -16,13 +16,25 @@ export default function ProjectDetailsPage({
 }: ProjectDetailsPageProps) {
   const project = DATA.projects.find((p) => p.projectNumber === projectNumber);
 
+  const getMonthsOld = (dateFinished: string): number => {
+    const now = new Date();
+
+    // Parse "Month YYYY" format
+    const [month, year] = dateFinished.split(" ");
+    const projectDate = new Date(`${month} 1, ${year}`);
+
+    const yearDiff = now.getFullYear() - projectDate.getFullYear();
+    const monthDiff = now.getMonth() - projectDate.getMonth();
+
+    return yearDiff * 12 + monthDiff;
+  };
+
   // Scroll to top when component mounts
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.scrollTo(0, 0);
     }
   }, []);
-
 
   // Record mapping project fields to display labels
   const fieldLabels: Record<string, string> = {
@@ -77,7 +89,9 @@ export default function ProjectDetailsPage({
                     className="flex w-full border-b-[1px] border-[#d5d5d5] pb-8"
                   >
                     <div className="w-1/2">
-                      <p className="font-semibold sm:text-xl text-base">{label}</p>
+                      <p className="font-semibold sm:text-xl text-base">
+                        {label}
+                      </p>
                     </div>
                     <div className="w-1/2 uppercase sm:text-xl text-base text-[#868686]">
                       {key === "link" ? (
@@ -103,8 +117,12 @@ export default function ProjectDetailsPage({
                 );
               })}
             </div>
-
-            <div className="2xl:text-4xl sm:text-3xl 2xl:leading-[48px] text-2xl sm:leading-[40px] leading-[32px] 2xl:my-20 sm:my-16 my-8">
+            <div className="mt-8">
+              <p className="italic 2xl:text-xl sm:text-lg text-base">
+                {`Just a heads up, this project is over ${getMonthsOld(project.dateFinished)} months old as I've been on co-ops for the past bit. Eventually will work on some fresh stuff!`}
+              </p>
+            </div>
+            <div className="2xl:text-4xl sm:text-3xl 2xl:leading-[48px] text-2xl sm:leading-[40px] leading-[32px] sm:my-16 my-8">
               <p className={`${lora.className}`}>{project.fullDescription}</p>
             </div>
             <BackToHome />

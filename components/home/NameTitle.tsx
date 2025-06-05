@@ -37,11 +37,11 @@ export default function NameTitle() {
               damping: 20,
               mass: 0.8,
             }}
-            className="w-full h-full"
+            className="w-full h-full bg-red-200"
           >
             <Image
               fill
-              className="object-cover"
+              className="object-fill"
               src={WillUpdateSoon}
               alt="Header Image"
               priority

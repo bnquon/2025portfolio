@@ -8,20 +8,34 @@ interface HoverIconProps {
   isHovering: boolean;
 }
 
-export default function HoverIcon({
-  isHovering,
-}: HoverIconProps) {
+export default function HoverIcon({ isHovering }: HoverIconProps) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [isPressed, setIsPressed] = useState(false);
   const animationRef = useRef<number | null>(null);
-  
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
 
+    const handleMouseDown = () => {
+      setIsPressed(true);
+    };
+
+    const handleMouseUp = () => {
+      setIsPressed(false);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
   }, []);
 
   useEffect(() => {
@@ -32,7 +46,6 @@ export default function HoverIcon({
       }));
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animationRef.current = requestAnimationFrame(animate);
     return () => {
       if (animationRef.current) {
@@ -46,7 +59,7 @@ export default function HoverIcon({
       animate={{
         x: cursorPos.x,
         y: cursorPos.y,
-        scale: isHovering ? 1 : 0,
+        scale: isHovering ? (isPressed ? 0.92 : 1) : 0,
         opacity: isHovering ? 1 : 0,
       }}
       transition={{

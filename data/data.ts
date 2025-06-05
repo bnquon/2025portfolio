@@ -19,7 +19,7 @@ export const DATA = {
   ],
   homeIntro: `Third-year CS student at Simon Fraser 
     University interning as a software engineer at Trulioo. 
-    Always looking for opportunities to learn (and eat).`,
+    Always looking for opportunities to learn and grow.`,
   socials: [
     {
       url: "https://www.linkedin.com/in/brandon-quon/",
@@ -36,7 +36,7 @@ export const DATA = {
   ],
   aboutMe: `Studying CS wasn't actually my original plan, I was set on kinesiology until something just felt off. 
     Following my gut led me to computer science, and it's been the right choice ever since.
-    Pretty sure alternate universe me is complaining about memorizing biomechanics, 
+    Alternate universe me is complaining about memorizing anatomy, 
     but you wouldn't know since he wouldn't know how to make a website.`,
   work: [
     {
@@ -85,15 +85,15 @@ export const DATA = {
       dateFinished: "August 2024",
       techStack: "TypeScript, Next.js, React.js, TailwindCSS",
       summary:
-        "Designed, implemented, and handed off the website for the SFU Esports & Gaming Club, helping them establish a stronger online presence for their community",
+        "Designed, implemented, and handed off the website for the SFU Esports & Gaming Club, helping them establish a stronger online presence for their community.",
       previewUrl:
         "/sfueapreview.webp",
       link: "https://github.com/bnquon/SFUEA",
       fullDescription: `Reached out to the SFU Esports & Gaming Club to offer web development services, 
-        having been part of the gaming community myself (spent way too many hours on TFT). 
+        having been part of the gaming community myself (spent too many hours on TFT). 
         Built a fully mobile-responsive React website for event listings, news, and member engagement. 
         Collaborated with club leadership throughout development and delivered complete project documentation.`,
-      type: "Personal",
+      type: "Client",
       mockUpImages: ["/sfueamock1.webp", "/sfueamock2.webp"],
     },
     {
@@ -102,13 +102,13 @@ export const DATA = {
       dateFinished: "March 2024",
       techStack: "JavaScript, React.js, PostgreSQL, TheMovieDB API, Vercel",
       summary:
-        "Full-stack web application for users to search and review movies. Favourite movie when building this was Inception and it still is, Blade Runner 2049 is a close second.",
+        "Full-stack web application for users to create a customizable profile to search and review movies. Favourite movie when building this was Inception and it still is, Blade Runner 2049 is a close second.",
       previewUrl:
         "/cineversepreview.webp",
       link: "https://github.com/bnquon/CineVerse",
       fullDescription: `Developed a full-stack movie platform with search, review, and social features for film enjoyers. 
         Used React and PostgreSQL with TheMovieDB API for comprehensive movie data. 
-        Implemented user authentication and charts for movie review distributions. 
+        Implemented user authentication, password encryption, and charts to display movie review distributions. 
         Inception still holds the #1 movie spot as mentioned, but Severance has definitely claimed the #1 TV show title.`,
       type: "Personal",
       mockUpImages: ["/cineversemock1.webp", "/cineversemock2.webp"],
@@ -120,11 +120,11 @@ export const DATA = {
       techStack:
         "TypeScript, Java, Next.js, React.js, Spring Boot, Tailwind CSS, AWS RDS, Meta Llama 3.1",
       summary:
-        "Full-stack web application to mimic the functionality of Notion with a built in chatbot. My productivity levels remain unchanged, but my development skills did not.",
+        "Full-stack web application to mimic the functionality of Notion with a built in contextually aware AI chatbot. My productivity levels remain unchanged, but my development skills did not.",
       previewUrl: "/MindSpaceShrug.webp",
       link: "https://github.com/bnquon/notion-clone",
       fullDescription: `Full-stack Notion clone featuring an AI chatbot powered by Meta Llama 3.1. It was my first deep dive into AWS and its legendarily confusing maze of services. 
-        Built with TypeScript, Next.js, Spring Boot, and MySQL AWS RDS. Implemented REST APIs, rich text editing, and real-time context sensitive AI chat. 
+        Built with TypeScript, Next.js, Spring Boot, and MySQL AWS RDS. Implemented REST APIs, rich text editing, document saving, and real-time context sensitive AI chat. 
         My organizational skills haven't improved, but now I get a monthly AWS invoice email.`,
       type: "Personal",
       mockUpImages: ["/MindSpaceShrug.webp"],
@@ -136,7 +136,7 @@ export const DATA = {
       techStack:
         "Golang, TypeScript, React.js, MongoDB, Google Cloud Platform (GCP)",
       summary:
-        "Web scraper that scrapes the top 10 daily player performances and emails subscribers via GCP. Would have won my league if not for injuries.",
+        "Web scraper that scrapes the top 10 daily player performances and emails subscribers via GCP. I started the season 14-0 and would have won the league if not for playoff injuries.",
       previewUrl: "/WebScrapeShrug.webp",
       link: "https://github.com/bnquon/fantasyNBAScraper",
       fullDescription: `Developed an automated NBA data scraper using Golang and MongoDB that emails daily top player performances through GCP cloud functions. 
