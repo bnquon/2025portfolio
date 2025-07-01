@@ -29,6 +29,12 @@ export default function ProjectDetailsPage({
     return yearDiff * 12 + monthDiff;
   };
 
+  let monthsOld;
+
+  if (project) {
+    monthsOld = getMonthsOld(project.dateFinished);
+  }
+
   // Scroll to top when component mounts
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -65,17 +71,28 @@ export default function ProjectDetailsPage({
       <RevealAnimationWrapper delay={1} duration={0.5} distance={50}>
         <div className="flex sm:flex-row-reverse flex-col w-full">
           <div className="flex flex-col sm:w-1/2 w-full relative p-6 gap-3 sm:p-20 sm:gap-10 bg-black h-fit">
-            {project.mockUpImages.map((image, index) => (
-              <Image
-                key={index}
-                width={1200}
-                height={800}
-                src={image}
-                alt={`Project Image ${index + 1}`}
-                className="w-full h-auto"
-                priority
-              />
-            ))}
+            {project.mockUpMedia.map((media, index) =>
+              media.type === "image" ? (
+                <Image
+                  key={index}
+                  width={1200}
+                  height={800}
+                  src={media.src}
+                  alt={`Project Image ${index + 1}`}
+                  className="w-full h-auto"
+                  priority
+                />
+              ) : (
+                <video
+                  key={index}
+                  src={media.src}
+                  controls
+                  muted
+                  autoPlay
+                  className="w-full h-auto"
+                />
+              )
+            )}
           </div>
 
           <div className="sm:w-1/2 w-full flex flex-col 2xl:pr-8 sm:pr-4 sm:mt-0 mt-8">
@@ -118,9 +135,12 @@ export default function ProjectDetailsPage({
               })}
             </div>
             <div className="mt-8">
-              <p className="italic 2xl:text-xl sm:text-lg text-base">
-                {`Just a heads up, this project is over ${getMonthsOld(project.dateFinished)} months old as I've been on co-ops for the past bit. Eventually will work on some fresh stuff!`}
-              </p>
+              {monthsOld && monthsOld > 6 && (
+                <p className="italic 2xl:text-xl sm:text-lg text-base">
+                  {`Just a heads up, this project is over ${monthsOld}
+                  months old as I've been on co-ops for the past bit. Eventually will work on some fresh stuff!`}
+                </p>
+              )}
             </div>
             <div className="2xl:text-4xl sm:text-3xl 2xl:leading-[48px] text-2xl sm:leading-[40px] leading-[32px] sm:my-16 my-8">
               <p className={`${lora.className}`}>{project.fullDescription}</p>

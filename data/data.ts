@@ -1,38 +1,17 @@
 export const DATA = {
   nav: [
-    {
-      name: "Home",
-      url: "/#",
-    },
-    {
-      name: "About",
-      url: "/#about",
-    },
-    {
-      name: "Projects",
-      url: "/#projects",
-    },
-    {
-      name: "Reach Out",
-      url: "/#reach-out",
-    },
+    { name: "Home", url: "/#" },
+    { name: "About", url: "/#about" },
+    { name: "Projects", url: "/#projects" },
+    { name: "Reach Out", url: "/#reach-out" },
   ],
   homeIntro: `Third-year CS student at Simon Fraser 
     University interning as a software engineer at Trulioo. 
     Always looking for opportunities to learn and grow.`,
   socials: [
-    {
-      url: "https://www.linkedin.com/in/brandon-quon/",
-      icon: "faLinkedin",
-    },
-    {
-      url: "https://github.com/bnquon",
-      icon: "faGithub",
-    },
-    {
-      url: "mailto:bqa7@sfu.ca",
-      icon: "faEnvelope",
-    },
+    { url: "https://www.linkedin.com/in/brandon-quon/", icon: "faLinkedin" },
+    { url: "https://github.com/bnquon", icon: "faGithub" },
+    { url: "mailto:bqa7@sfu.ca", icon: "faEnvelope" },
   ],
   aboutMe: `Studying CS wasn't actually my original plan, I was set on kinesiology until something just felt off. 
     Following my gut led me to computer science, and it's been the right choice ever since.
@@ -81,37 +60,42 @@ export const DATA = {
   projects: [
     {
       projectNumber: "(01)",
+      title: "Job Auto Tracker",
+      dateFinished: "June 2025",
+      techStack:
+        "TypeScript, Python, React.js, FastAPI, AWS (EC2 & RDS), Docker, Google Gemini",
+      summary:
+        "Full-stack job tracking dashboard that extracts job posting data from screenshots using OCR powered by Google Gemini. This project was built to ease the tedious process of manual job tracking during application seasons.",
+      previewUrl: "/ssautojobimage.webp",
+      link: "https://github.com/bnquon/job-auto-tracker",
+      fullDescription: `Developed a full-stack job application management tool that leverages OCR with Google Gemini to parse job details from screenshots. 
+        Backend is built with FastAPI featuring REST APIs, bcrypt password hashing, JWT authentication, and PostgreSQL storage on AWS RDS.
+        The backend is containerized with Docker and deployed on AWS EC2, with a frontend reverse proxy to handle HTTP/HTTPS issues during deployment.
+        I just hated filling out Notion forms every time I wanted to track a job application.`,
+      type: "Personal",
+      mockUpMedia: [
+        { type: "video", src: "/ssautojobvideo.mp4" },
+        { type: "image", src: "/ssautojobdemoimage.webp" },
+      ],
+    },
+    {
+      projectNumber: "(02)",
       title: "SFU Esports & Gaming Club Website",
       dateFinished: "August 2024",
       techStack: "TypeScript, Next.js, React.js, TailwindCSS",
       summary:
         "Designed, implemented, and handed off the website for the SFU Esports & Gaming Club, helping them establish a stronger online presence for their community.",
-      previewUrl:
-        "/sfueapreview.webp",
+      previewUrl: "/sfueapreview.webp",
       link: "https://github.com/bnquon/SFUEA",
       fullDescription: `Reached out to the SFU Esports & Gaming Club to offer web development services, 
         having been part of the gaming community myself (spent too many hours on TFT). 
         Built a fully mobile-responsive React website for event listings, news, and member engagement. 
         Collaborated with club leadership throughout development and delivered complete project documentation.`,
       type: "Client",
-      mockUpImages: ["/sfueamock1.webp", "/sfueamock2.webp"],
-    },
-    {
-      projectNumber: "(02)",
-      title: "CineVerse",
-      dateFinished: "March 2024",
-      techStack: "JavaScript, React.js, PostgreSQL, TheMovieDB API, Vercel",
-      summary:
-        "Full-stack web application for users to create a customizable profile to search and review movies. Favourite movie when building this was Inception and it still is, Blade Runner 2049 is a close second.",
-      previewUrl:
-        "/cineversepreview.webp",
-      link: "https://github.com/bnquon/CineVerse",
-      fullDescription: `Developed a full-stack movie platform with search, review, and social features for film enjoyers. 
-        Used React and PostgreSQL with TheMovieDB API for comprehensive movie data. 
-        Implemented user authentication, password encryption, and charts to display movie review distributions. 
-        Inception still holds the #1 movie spot as mentioned, but Severance has definitely claimed the #1 TV show title.`,
-      type: "Personal",
-      mockUpImages: ["/cineversemock1.webp", "/cineversemock2.webp"],
+      mockUpMedia: [
+        { type: "image", src: "/sfueamock1.webp" },
+        { type: "image", src: "/sfueamock2.webp" },
+      ],
     },
     {
       projectNumber: "(03)",
@@ -127,7 +111,7 @@ export const DATA = {
         Built with TypeScript, Next.js, Spring Boot, and MySQL AWS RDS. Implemented REST APIs, rich text editing, document saving, and real-time context sensitive AI chat. 
         My organizational skills haven't improved, but now I get a monthly AWS invoice email.`,
       type: "Personal",
-      mockUpImages: ["/MindSpaceShrug.webp"],
+      mockUpMedia: [{ type: "image", src: "/MindSpaceShrug.webp" }],
     },
     {
       projectNumber: "(04)",
@@ -142,7 +126,7 @@ export const DATA = {
       fullDescription: `Developed an automated NBA data scraper using Golang and MongoDB that emails daily top player performances through GCP cloud functions. 
         Built a really simple React frontend for users to sign up for the emails. The real insight: seeing daily why I'm not an NBA general manager.`,
       type: "Personal",
-      mockUpImages: ["/WebScrapeShrug.webp"],
+      mockUpMedia: [{ type: "image", src: "/WebScrapeShrug.webp" }],
     },
   ],
   contact: [
