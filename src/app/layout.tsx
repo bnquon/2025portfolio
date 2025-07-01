@@ -11,7 +11,7 @@ import Footer from "../../components/footer/Footer";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://2025portfolio-sepia.vercel.app"),
+  metadataBase: new URL("https://brandon-quon.com"),
   title: "Brandon Quon's Portfolio",
   description:
     "I'm Brandon, a software engineer and Computer Science student at SFU, currently interning at Trulioo. Explore my portfolio to see my projects and to learn more about me.",
